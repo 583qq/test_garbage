@@ -114,8 +114,8 @@ class Filter {
                 $statement += $q;
             if($q == end(array_keys($queries)))
                 break;
-            
-            $statement += " AND ";
+            if($q != "")
+                $statement += " AND ";
         }
 
         return $statement + ")";
